@@ -1,0 +1,32 @@
+{
+  "name": "reduxdemo",
+  "version": "1.0.0",
+  "description": "此项目是根据《深入React技术栈》第五章第六节Redux 应用实例而来。目的在于手敲一遍源码来增强记忆。在写的时候会多加注释说明，写的时候的心得体会也会放在里面。 ## I. npm install",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.1.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.7.2",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XiangLuoyang/ReduxDemo.git"
+  },
+  "author": "XiangLuoyang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XiangLuoyang/ReduxDemo/issues"
+  },
+  "homepage": "https://github.com/XiangLuoyang/ReduxDemo#readme"
+}
