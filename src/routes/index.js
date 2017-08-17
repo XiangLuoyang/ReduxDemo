@@ -10,13 +10,12 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import Home from '../views/Home';
 import Detail from '../views/Detail';
 
-const routes = (
-    <Router history = {hashHistory}>
-        <Router path = '/' component = { Home } />
-        <Router path = '/detail:id' component = { Detail } />
-    </Router>
-);
-
+const routes = () =>
+  <Router history={hashHistory}>
+    <Route path = "/" component = { Home }></Route>
+    <Route path = "/detail:id" component = { Detail }></Route>
+  </Router>
+export default routes;
 /**
  * 【hashHistory VS browserHistory】
  * 在上述配置里，我们先告诉 react-router 使用 hashHistory 作为前端路由的实现方式,

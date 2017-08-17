@@ -54,7 +54,8 @@
  │    ├── utils                     工具函数、常量等
  │    ├── styles                    全局公共样式
  │    └── app.css                   应用主样式表 
- ├── test                     
+ ├── test
+ ├── index.html                     用于加载所有的脚本和样式文件                     
  └── build  
 ```
 其中，只需要关注 `views/` 和 `components/` 这两个文件夹，他们存放绝大多数业务逻辑代码
@@ -77,4 +78,12 @@
         ├── Home.css
         ├── Home.js             
         └── HomeRedux.js               
+```
+剩下具体的路由配置可以在["/src/routes/index.js"](https://github.com/XiangLuoyang/ReduxDemo/blob/master/src/routes/index.js)的注释中详细说明。
+
+## IV.增加入口文件
+```
+1. 将 index.html中的节点绑定到 React 上(通过 ReactDOM )
+2. 配置 webpack (配置文件见 webpack.config.js )
+    └──这里配置完 webpack.config.js 后，可以在 package.json 文件中添加 script 字段
 ```
