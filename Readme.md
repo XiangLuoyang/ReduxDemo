@@ -62,7 +62,7 @@
 * `views/` 文件夹中，存放的是每个路由的入口，如首页、详情页和管理后台页等（每个页对应着一个文件夹）。每个入口会有三个文件: <b> \*.js </b>是入口的组件，<b> *.css </b>是对应组件的样式，而<b> *Redux.js </b>是 components/Home/ 文件夹下所有 reducer 和 action 的聚合。
 * `components/` 文件夹中，是当前路由对应的页面所需要的所有内容——components、actions、reducers、样式等。
 
-## III.设计路由
+## III. 设计路由
 `设计路由时新增的目录结构，并针对博客系统的设计增加以下组件(Detail)`
 ```                 
    src/                            
@@ -81,7 +81,7 @@
 ```
 剩下具体的路由配置可以在["/src/routes/index.js"](https://github.com/XiangLuoyang/ReduxDemo/blob/master/src/routes/index.js)的注释中详细说明。
 
-## IV.增加入口文件
+## IV. 增加入口文件
 ```
 1. 将 index.html中的节点绑定到 React 上(通过 ReactDOM )。
 2. 配置 webpack (配置文件见 webpack.config.js )。
@@ -90,3 +90,23 @@
    书中的配置推荐是 webpack@1.13.1, router@3.x。
    无论如何，babel 的配置方法具体看代码，还要手动创建 .babelrc 文件及其 preset 字段。
 ```
+
+## V. 优化构建脚本
+
+实现目标：Redux 应用的热重载，代码的实时更新可以自动体现在浏览器上。<br />
+利用工具：webpack-dev-server
+
+## VI. 添加布局文件
+`新增布局文件`
+```
+   src/                            
+    ├── components   
+    ├── layouts     
+    │    ├── Frame.js             
+    │    └── Nav.js     导航栏
+    ├── routes                      
+    └── views  
+```
+
+## VII. 准备首页的数据
+## VIII. 连接Redux
