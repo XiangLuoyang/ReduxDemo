@@ -83,7 +83,10 @@
 
 ## IV.增加入口文件
 ```
-1. 将 index.html中的节点绑定到 React 上(通过 ReactDOM )
-2. 配置 webpack (配置文件见 webpack.config.js )
-    └──这里配置完 webpack.config.js 后，可以在 package.json 文件中添加 script 字段
+1. 将 index.html中的节点绑定到 React 上(通过 ReactDOM )。
+2. 配置 webpack (配置文件见 webpack.config.js )。
+    └──这里配置完 webpack.config.js 后，可以在 package.json 文件中添加 script 字段。
+3. 这里要注意 webpack 和 react-router 的版本。
+   书中的配置推荐是 webpack@1.13.1, router@3.x。
+   无论如何，babel 的配置方法具体看代码，还要手动创建 .babelrc 文件及其 preset 字段。
 ```
