@@ -5,4 +5,5 @@ export default combineReducers({
     list,
 });
 
-export * as listAction from '../components/Home/PreviewListRedux';
+import * as listAction from '../components/Home/PreviewListRedux';
+export const listAction;

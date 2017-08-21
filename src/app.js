@@ -4,8 +4,21 @@
  */
 import ReactDOM from 'react-dom'; 
 //只是这里为什么引入的是ReactDOM而不是React？
+import React from 'react';
+import configureStore from './redux/configureStore';
+import { Provider } from 'react-redux';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { hashHistory } from 'react-router';
 import routes from './routes/';
-ReactDOM.render(routes, document.getElementById('root'));
+
+const store = configureStore();
+const history = syncHistoryWithStore(hashHistory, store);
+
+ReactDOM.render((
+    <Provider store={store}>
+        {routes(history)}
+    </Provider>
+), document.getElementById('root'));
 
 /**
  * 回答上面的【只是这里为什么引入的是ReactDOM而不是React？】问题：
