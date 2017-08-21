@@ -109,4 +109,4 @@
 ```
 
 ## VII. 准备首页的数据
-## VIII. 连接Redux
+## VIII. 连接 Redux
