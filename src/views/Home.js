@@ -23,6 +23,6 @@ export default connect(state => {
     };
 }, dispatch => {
     return {
-        listActions: bindActionCreators(listAction, dispatch),
+        listActions: bindActionCreators(listActions, dispatch),
     };
 })(Home);

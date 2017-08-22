@@ -31,3 +31,5 @@ class PreviewList extends Component {
         return articleList.map(item => (<Previw {...item} key={item.id} />));
     }
 }
+// export 部分千万不要忘记了
+export default PreviewList;

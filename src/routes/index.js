@@ -5,13 +5,13 @@
  */
 
 import React from 'react';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute} from 'react-router';
 
 import Frame from '../layouts/Frame';
 import Home from '../views/Home';
 import Detail from '../views/Detail';
 
-const routes = (
+const routes = hashHistory => (
   <Router history={hashHistory}>
     <Route path = "/" component = { Frame }>
       <IndexRoute component={Home} />
@@ -30,5 +30,25 @@ export default routes;
  * 的是 HTML5 的 pushState API。这种技术也有一定的局限性，首先需要服务器端将所有的
  * 请求重定向到首页，其次部分较老的浏览器并不支持 pushState 技术。
  * 
- * 为了得到更好的兼容性，我们在实例项目中选择 hashHistory。
+ * 为了得到更好的兼容性，我们在实例项目中选择 hashHistory。注意对比一下 hashHistory 的写法
  */
+
+ // 以下是有个报错的示例  (0,_routers2.default) is not a function
+ /**
+  * import React from 'react';
+  * import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+
+  * import Frame from '../layouts/Frame';
+  * import Home from '../views/Home';
+  * import Detail from '../views/Detail';
+
+  * const routes = (
+  *   <Router history={hashHistory}>
+  *     <Route path = "/" component = { Frame }>
+  *       <IndexRoute component={Home} />
+  *       <Route path = "/detail" component = { Detail }></Route>
+  *     </Route>
+  *   </Router>
+  * );
+  * export default routes;
+  */
