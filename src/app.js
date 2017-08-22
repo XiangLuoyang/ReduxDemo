@@ -2,14 +2,13 @@
  * app.js 是整个应用的入口文件
  * 所以在依赖方面，我们需要：1. React 来渲染所有的组件；2. 整个应用路由结构
  */
-import ReactDOM from 'react-dom'; 
+import ReactDOM from 'react-dom';
 //只是这里为什么引入的是ReactDOM而不是React？
 import React from 'react';
 import configureStore from './redux/configureStore';
 import { Provider } from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
-import { hashHistory } from 'react-router';
-import routes from './routes/';
+
 
 const store = configureStore();
 const history = syncHistoryWithStore(hashHistory, store);

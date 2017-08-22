@@ -2,7 +2,7 @@
  * 正如之前所说，*Redux.js里包含了*.js这个组件需要的reducer、action creator 和 constants
  */
 
- const initialstate = {
+ const initialState = {
      loading:true,
      error:false,
      articleList:[]
