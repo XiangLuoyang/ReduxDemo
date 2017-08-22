@@ -4,7 +4,6 @@ import { routerReducer } from 'react-router-redux';
 import ThunkMiddleware from 'redux-thunk';
 import rootReducer from './reducer';
 
-console.log(rootReducer);
 const finalCreateStore = compose(
     applyMiddleware(ThunkMiddleware)
 )(createStore);
