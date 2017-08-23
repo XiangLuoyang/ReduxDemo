@@ -28,7 +28,11 @@ class PreviewList extends Component {
             return <p className="message">Loading...</p>;
         }
 
-        return articleList.map(item => (<Previw {...item} key={item.id} />));
+        return (
+            <div>
+            {articleList.map(item => (<Preview {...item} key={item.id} />))}
+            </div>
+        )
     }
 }
 // export 部分千万不要忘记了

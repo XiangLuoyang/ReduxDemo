@@ -33,7 +33,7 @@
                  ...state,
                  loading:false,
                  error:false,
-                 articleList: action.payload.articleList,
+                 articleList: action.payload,
              };
          }
          case LOAD_ARTICLES_ERROR:{
