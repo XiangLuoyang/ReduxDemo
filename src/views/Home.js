@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PreviewList from '../components/Home/PreviewList';
 import { listActions } from './HomeRedux';
+import { push } from 'react-router-redux';
  class Home extends Component {
     render() {
         return (
@@ -11,6 +12,7 @@ import { listActions } from './HomeRedux';
                 <PreviewList
                     {...this.props.list}
                     {...this.props.listActions}
+                    push = {this.props.push}
                 />
             </div>
         );
@@ -24,5 +26,6 @@ export default connect(state => {
 }, dispatch => {
     return {
         listActions: bindActionCreators(listActions, dispatch),
+        push: bindActionCreators(push, dispatch),
     };
 })(Home);
