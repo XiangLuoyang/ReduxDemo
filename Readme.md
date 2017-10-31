@@ -26,7 +26,6 @@
 `包含了上一步中利用指令生成的文件(夹)`
 
 ```
-test test test
 .
  ├── node_modules                   
  ├── package.json                    
